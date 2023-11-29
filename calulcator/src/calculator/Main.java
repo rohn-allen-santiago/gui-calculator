@@ -18,8 +18,11 @@ public class Main {
         // Set exit behaviour
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 
-        // Set position and size of frame
+        // Set size of frame
         frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        frame.setLocationRelativeTo(null);          // Sets frame to center of the screen
+
+        // Sets frame to center of the screen
+        frame.setLocationRelativeTo(null);
+
     }
 }
