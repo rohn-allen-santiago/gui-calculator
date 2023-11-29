@@ -19,6 +19,7 @@ public class Main {
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 
         // Set position and size of frame
-        frame.setBounds(FRAME_X, FRAME_Y, FRAME_WIDTH, FRAME_HEIGHT);
+        frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        frame.setLocationRelativeTo(null);          // Sets frame to center of the screen
     }
 }
