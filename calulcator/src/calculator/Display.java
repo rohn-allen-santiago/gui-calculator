@@ -1,27 +1,32 @@
 package calculator;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Display {
 
-    private JLabel display;
+    public static final int FRAME_X = 500;
+    public static final int FRAME_Y = 0;
+    public static final int FRAME_WIDTH = 600;
+    public static final int FRAME_HEIGHT = 800;
 
-    public Display() {
-        display = new JLabel();
-        display.setHorizontalAlignment(JLabel.LEFT);
-        display.setVerticalAlignment(JLabel.CENTER);
-    }
+   Display() {
 
-    public JLabel getDisplay() {
-        return display;
-    }
+        // Create JFrame
+        JFrame frame = new JFrame("Calculator");
+        frame.setVisible(true);
 
-    public void setDisplay(JLabel display) {
-        this.display = display;
-    }
+        // Set exit behaviour
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 
-    public void updateText(String symbol) {
-        String currentText = display.getText();
-        display.setText(currentText + symbol);
+        // Set size of frame
+        frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
+
+        // Sets frame to center of the screen
+        frame.setLocationRelativeTo(null);
+
+        // Set grid layout of frame
+        frame.setLayout(new GridLayout(4,4));
+
     }
 }
