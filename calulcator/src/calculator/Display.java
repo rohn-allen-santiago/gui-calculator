@@ -11,6 +11,10 @@ public class Display {
     public static final int BUTTON_PANEL_Y = 170;
     public static final int BUTTON_PANEL_WIDTH = 600;
     public static final int BUTTON_PANEL_HEIGHT = 600;
+    public static final int TEXT_PANEL_X = 0;
+    public static final int TEXT_PANEL_Y = 0;
+    public static final int TEXT_PANEL_WIDTH = 600;
+    public static final int TEXT_PANEL_HEIGHT = 170;
 
     String[] buttonChars = {"7", "8", "9", "/",
                             "4", "5", "6", "*",
@@ -45,10 +49,21 @@ public class Display {
         // Add buttons to grid
         for(int i = 0; i < buttons.length; i++) {
             JButton b = new JButton(buttonChars[i]);
+            b.setFont(new Font("Calibiri", Font.PLAIN, 20));
             b.setBackground(Color.black);
             b.setForeground(Color.white);
             buttons[i] = b;
             buttonPanel.add(b);
         }
+
+        // Add text display to frame
+        JLabel text = new JLabel(" 123456789");
+        text.setFont(new Font("Calibri", Font.PLAIN, 40));
+        text.setOpaque(true);
+        text.setBackground(Color.gray);
+        text.setForeground(Color.black);
+        text.setBounds(TEXT_PANEL_X, TEXT_PANEL_Y, TEXT_PANEL_WIDTH, TEXT_PANEL_HEIGHT);
+        text.setAlignmentX(Label.LEFT);
+        frame.add(text);
     }
 }
